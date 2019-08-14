@@ -71,7 +71,7 @@ class SwarmNet(keras.Model):
 
         if self.edge_type > 1:
             encoded_msg_by_type = []
-            for i in range(self.edge_type - self.skip_zero):
+            for i in range(self.edge_type-self.skip_zero):
                 # mlp_encoder for each edge type.
                 encoded_msg = self.edge_encoders[i](edge_msg, training=training)
 
